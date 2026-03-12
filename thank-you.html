@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reid — You're In | MeetReid.ai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1615108696171983');
+fbq('track', 'PageView');
+fbq('track', 'Lead');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1615108696171983&ev=Lead&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0d1117;
+    --navy-mid: #131a24;
+    --navy-card: #182030;
+    --navy-border: #1e2d42;
+    --gold: #c9941a;
+    --gold-light: #e6b040;
+    --gold-pale: rgba(201,148,26,0.12);
+    --white: #f7f4ef;
+    --muted: #8a95a3;
+    --text: #dde3ec;
+  }
+
+  body {
+    background: var(--navy);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    border-bottom: 1px solid rgba(201,148,26,0.08);
+  }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.25rem;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  /* ── MAIN ── */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  main::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 40%, rgba(201,148,26,0.1) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 30% at 20% 80%, rgba(201,148,26,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Corner accents */
+  .corner { position: absolute; width: 32px; height: 32px; }
+  .c-tl { top: 32px; left: 32px; border-top: 1.5px solid rgba(201,148,26,0.3); border-left: 1.5px solid rgba(201,148,26,0.3); }
+  .c-tr { top: 32px; right: 32px; border-top: 1.5px solid rgba(201,148,26,0.3); border-right: 1.5px solid rgba(201,148,26,0.3); }
+  .c-bl { bottom: 32px; left: 32px; border-bottom: 1.5px solid rgba(201,148,26,0.3); border-left: 1.5px solid rgba(201,148,26,0.3); }
+  .c-br { bottom: 32px; right: 32px; border-bottom: 1.5px solid rgba(201,148,26,0.3); border-right: 1.5px solid rgba(201,148,26,0.3); }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Monogram */
+  .monogram {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 40px;
+  }
+
+  /* Badge */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold-pale);
+    border: 1px solid rgba(201,148,26,0.3);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 32px;
+  }
+
+  .badge-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* Headline */
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  /* Subhead */
+  .subhead {
+    font-size: 1.1rem;
+    color: var(--muted);
+    font-weight: 300;
+    max-width: 480px;
+    margin-bottom: 56px;
+  }
+
+  /* Divider */
+  .divider {
+    width: 48px; height: 1.5px;
+    background: rgba(201,148,26,0.4);
+    margin-bottom: 48px;
+  }
+
+  /* What happens next */
+  .next-steps {
+    width: 100%;
+    max-width: 500px;
+    background: var(--navy-card);
+    border: 1px solid var(--navy-border);
+    border-radius: 16px;
+    padding: 32px 36px;
+    text-align: left;
+    margin-bottom: 48px;
+  }
+
+  .next-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--navy-border);
+  }
+
+  .step:last-child { border-bottom: none; }
+
+  .step-num {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--gold-pale);
+    border: 1px solid rgba(201,148,26,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .step-text h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 3px;
+  }
+
+  .step-text p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  /* CTA */
+  .cta-sub {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  .cta-sub a {
+    color: var(--gold-light);
+    text-decoration: none;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 24px 40px;
+    border-top: 1px solid var(--navy-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  footer .logo {
+    font-family: 'DM Serif Display', serif;
+    color: var(--muted);
+    font-size: 1rem;
+  }
+
+  footer p { font-size: 0.8rem; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="https://meetreid.ai">MeetReid.ai</a>
+</nav>
+
+<main>
+  <div class="corner c-tl"></div>
+  <div class="corner c-tr"></div>
+  <div class="corner c-bl"></div>
+  <div class="corner c-br"></div>
+
+  <div class="content">
+
+    <!-- Monogram -->
+    <svg class="monogram" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="36" cy="36" r="34" stroke="#c9941a" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="36" cy="36" r="27" stroke="#c9941a" stroke-width="0.5" stroke-opacity="0.2"/>
+      <text x="36" y="50" text-anchor="middle"
+        font-family="DM Serif Display, Georgia, serif"
+        font-size="38" fill="#f7f4ef">R</text>
+      <circle cx="54" cy="18" r="4" fill="#c9941a" opacity="0.8"/>
+    </svg>
+
+    <div class="badge">
+      <div class="badge-dot"></div>
+      Application Received
+    </div>
+
+    <h1>You're on the list.<br><em>Welcome to Reid.</em></h1>
+    <p class="subhead">Your application is in. We review every submission personally and only work with agents who are the right fit.</p>
+
+    <div class="divider"></div>
+
+    <div class="next-steps">
+      <div class="next-label">What happens next</div>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h3>We review your application</h3>
+          <p>We'll look it over within 24 hours and reach out if it's a fit.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h3>20-minute call with Caleb</h3>
+          <p>A quick conversation to understand your business and make sure Reid is right for you.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h3>Get access & connect your Gmail</h3>
+          <p>Takes 3 minutes. Reid starts learning your business immediately.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="cta-sub">Questions? Reach out at <a href="mailto:founders@meetreid.ai">founders@meetreid.ai</a></p>
+
+  </div>
+</main>
+
+<footer>
+  <span class="logo">MeetReid.ai</span>
+  <p>© 2026 MeetReid.ai · founders.meetreid.ai</p>
+</footer>
+
+</body>
+</html>
